@@ -1,0 +1,3 @@
+Car, 4
+Helmet, 4
+Money, 5

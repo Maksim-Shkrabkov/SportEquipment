@@ -1,0 +1,1 @@
+RentUnit [equipment=Equipment [title=Eq2], hourRate=2.6]

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/sport_equipment_schema" xmlns:tns="http://www.example.org/sport_equipment_schema" elementFormDefault="qualified">
+
+	<xs:element name="station">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cycle" type="tns:CycleType"/>
+				<xs:element name="kayak" type="tns:KayakType"/>
+				<xs:element name="skiing" type="tns:SkiingType"/>
+				<xs:element name="glasses" type="tns:GlassesType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="CycleType">
+		<xs:complexContent>
+			<xs:extension base="tns:EquipmentType">
+				<xs:sequence>
+					<xs:element name="category" type="tns:Category"/>
+					<xs:element name="cost" type="xs:int"/>
+					<xs:element name="countOfWheels" type="xs:int"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="KayakType">
+		<xs:complexContent>
+			<xs:extension base="tns:EquipmentType">
+				<xs:sequence>
+					<xs:element name="category" type="tns:Category"/>
+					<xs:element name="cost" type="xs:int"/>
+					<xs:element name="countOfpaddles" type="xs:int"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="SkiingType">
+		<xs:complexContent>
+			<xs:extension base="tns:EquipmentType">
+				<xs:sequence>
+					<xs:element name="category" type="tns:Category"/>
+					<xs:element name="cost" type="xs:int"/>
+					<xs:element name="brand" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="GlassesType">
+		<xs:complexContent>
+			<xs:extension base="tns:AccessoryType">
+				<xs:sequence>
+					<xs:element name="category" type="tns:Category"/>
+					<xs:element name="cost" type="xs:string"/>
+					<xs:element name="colour" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="Category">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="WINTER"/>
+			<xs:enumeration value="SUMMER"/>
+			<xs:enumeration value="AUTUMN"/>
+			<xs:enumeration value="SPRING"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<xs:complexType name="EquipmentType">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string"/>	
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="AccessoryType">
+		<xs:complexContent>
+			<xs:extension base="tns:EquipmentType">
+				<xs:sequence>
+					<xs:element name="type" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+
+</xs:schema>

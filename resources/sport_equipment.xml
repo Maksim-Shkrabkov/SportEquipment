@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<station xmlns="http://www.example.org/sport_equipment_schema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.example.org/sport_equipment_schema sport_equipment_schema.xsd">
+
+	<cycle>
+		<title>Best Cycle</title>	
+		<category>SUMMER</category>
+		<cost>100</cost>
+		<countOfWheels>2</countOfWheels>
+	</cycle>
+	<kayak>
+		<title>Best Kayak</title>	
+		<category>SUMMER</category>
+		<cost>150</cost>
+		<countOfpaddles>2</countOfpaddles>
+	</kayak>
+	<skiing>
+		<title>Best Skiing</title>	
+		<category>WINTER</category>
+		<cost>50</cost>
+		<brand>Igogo</brand>
+	</skiing>
+	<glasses>
+		<title>Best Glasses</title>
+		<type>Sunglasses</type>
+		<category>SUMMER</category>
+		<cost>25</cost>
+		<colour>Black</colour>
+	</glasses>
+	
+</station>
