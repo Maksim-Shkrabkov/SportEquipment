@@ -1,0 +1,34 @@
+package by.htp.speq.station;
+
+import by.htp.speq.entity.RentUnit;
+
+public class RentedCatalog {
+	
+	private static final int DEFAULT_CAPACITY = 10;
+	private RentUnit[] units;
+	private int lastIndex;
+	
+	public RentedCatalog() {
+		units = new RentUnit[DEFAULT_CAPACITY];
+		lastIndex = 0;
+	}
+
+	public RentUnit[] getUnits() {
+		return units;
+	}
+	
+	public int getLastIndex() {
+		return lastIndex;
+	}
+	public RentUnit getLastRentUnit() {
+		return units[lastIndex - 1];
+	}
+	
+	
+	
+	public void addRentUnit(RentUnit unit) {
+		units[lastIndex] = unit;
+		lastIndex++;
+	}
+
+}
